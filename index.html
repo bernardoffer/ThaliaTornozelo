@@ -16,17 +16,18 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 20px;
             overflow: hidden;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             animation: fadeIn 3s ease-in-out;
         }
 
         p {
-            font-size: 1.5rem;
-            max-width: 600px;
+            font-size: 1.2rem;
+            max-width: 90%;
             margin-top: 10px;
             opacity: 0.9;
         }
@@ -37,7 +38,9 @@
         }
 
         .container {
-            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.3);
             border-radius: 15px;
             backdrop-filter: blur(15px);
@@ -50,21 +53,29 @@
             margin-top: 20px;
         }
 
-        .heart {
-            position: absolute;
-            bottom: 10px;
-            font-size: 1.2rem;
-            opacity: 0.8;
+        .player iframe {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            aspect-ratio: 16 / 9;
         }
 
-        .sunflowers {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 600px;
+        .heart {
+            font-size: 1rem;
             opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 15px;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -75,12 +86,9 @@
         <p>Eu sei que agora pode parecer difícil, mas lembre-se: tudo passa, e você é mais forte do que imagina.</p>
         <p>Respire fundo, um dia de cada vez. Você não está sozinha.</p>
         <div class="player">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/cvoJ7qUh3y8?autoplay=1" 
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            
+            <iframe src="https://www.youtube.com/embed/cvoJ7qUh3y8?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
- 
     <p class="heart">Feito com ❤️ por alguém que se importa com você</p>
 </body>
 </html>
